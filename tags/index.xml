@@ -13,6 +13,22 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Golang</title>
+    <link>http://example.org/tags/golang/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>bytesc</author>
+    <guid>http://example.org/tags/golang/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Hugo</title>
+    <link>http://example.org/tags/hugo/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>bytesc</author>
+    <guid>http://example.org/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>标签1</title>
     <link>http://example.org/tags/%E6%A0%87%E7%AD%BE1/</link>
     <pubDate>Mon, 04 Mar 2019 15:58:26 &#43;0800</pubDate>
