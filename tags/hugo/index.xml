@@ -12,7 +12,7 @@
     <guid>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/hugo.png" referrerpolicy="no-referrer">
-            </div>Hugo快速配置 Hugo安装 1 2 3 4 5 6 7 8 #linux: sudo snap install hugo #win: #提前安装golang和git go env -w GOPROXY=https://goproxy.cn,direct go install -tags extended github.com/gohugoio/hugo@latest hugo version 创建项目 初始化 1 2 3 4 go mod init bytesc_blog hugo]]></description>
+            </div>快速配置Hugo的方法]]></description>
 </item>
 </channel>
 </rss>

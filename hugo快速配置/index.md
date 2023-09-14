@@ -83,10 +83,12 @@ description: ""
 license: ""
 images: []
 
+summary: "快速配置Hugo的方法"
+
 tags: [Hugo, Golang]
 categories: [常用环境]
 
-featuredImage: ""
+featuredImage: "/images/cover/hugo.png"
 featuredImagePreview: "/images/cover/hugo.png"
 
 hiddenFromHomePage: false
@@ -156,12 +158,14 @@ languageName = "简体中文"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 
+summaryLength = 70
+
 # 默认每页列表显示的文章数目
 paginate = 12
 # 谷歌分析代号 [UA-XXXXXXXX-X]
 googleAnalytics = ""
 # 版权描述，仅仅用于 SEO
-copyright = ""
+copyright = "bytesc"
 
 # 是否使用 robots.txt
 enableRobotsTXT = true
@@ -232,7 +236,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 [params]
   # 网站默认主题样式 ["auto", "light", "dark"]
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = ""
   #  哪种哈希函数用来 SRI, 为空时表示不使用 SRI
@@ -329,9 +333,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # 主页显示头像的 URL
       avatarURL = "/images/avatar.png"
       #  主页显示的网站标题 (支持 HTML 格式)
-      title = "个人开发者"
+      title = "BYTESC"
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = '这是我的全新BLOG </br></br> <a class="text-reset" href="http://www.bytesc.top" target="_blank"><b>个人网站</b></a>'
+      subtitle = ' </br> <a href="http://www.bytesc.top" target="_blank"><i class="fa-solid fa-globe"></i> <b>个人项目展示门户网站链接</b> <i class="fa-solid fa-link"></i></a>'
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
@@ -350,80 +354,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # 作者的社交信息设置
   [params.social]
     GitHub = "bytesc"
-    Linkedin = ""
-    Twitter = ""
-    Instagram = ""
-    Facebook = ""
-    Telegram = ""
-    Medium = ""
-    Gitlab = ""
-    Youtubelegacy = ""
-    Youtubecustom = ""
-    Youtubechannel = ""
-    Tumblr = ""
-    Quora = ""
-    Keybase = ""
-    Pinterest = ""
-    Reddit = ""
-    Codepen = ""
-    FreeCodeCamp = ""
-    Bitbucket = ""
-    Stackoverflow = ""
-    Weibo = ""
-    Odnoklassniki = ""
-    VK = ""
-    Flickr = ""
-    Xing = ""
-    Snapchat = ""
-    Soundcloud = ""
-    Spotify = ""
-    Bandcamp = ""
-    Paypal = ""
-    Fivehundredpx = ""
-    Mix = ""
-    Goodreads = ""
-    Lastfm = ""
-    Foursquare = ""
-    Hackernews = ""
-    Kickstarter = ""
-    Patreon = ""
-    Steam = ""
-    Twitch = ""
-    Strava = ""
-    Skype = ""
-    Whatsapp = ""
-    Zhihu = ""
-    Douban = ""
-    Angellist = ""
-    Slidershare = ""
-    Jsfiddle = ""
-    Deviantart = ""
-    Behance = ""
-    Dribbble = ""
-    Wordpress = ""
-    Vine = ""
-    Googlescholar = ""
-    Researchgate = ""
-    Mastodon = ""
-    Thingiverse = ""
-    Devto = ""
-    Gitea = ""
-    XMPP = ""
-    Matrix = ""
-    Bilibili = ""
-    Discord = ""
-    DiscordInvite = ""
-    Lichess = ""
-    ORCID = ""
-    Pleroma = ""
-    Kaggle = ""
-    MediaWiki= ""
-    Plume = ""
-    HackTheBox = ""
-    RootMe= ""
+    gitee = "bytesc"
+    wechat = "images/about/wechat.png"
+
     Phone = ""
     Email = "bytesc@163.com"
     RSS = false # 
+
 
   #  文章页面全局配置
   [params.page]
@@ -450,7 +387,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # 是否使用目录
       enable = true
       #  是否保持使用文章前面的静态目录
-      keepStatic = true
+      keepStatic = false
       # 是否使侧边目录自动折叠展开
       auto = true
     #  代码配置
@@ -491,24 +428,24 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #  文章页面的分享信息设置
     [params.page.share]
       enable = true
-      Twitter = true
-      Facebook = true
+      Twitter = false
+      Facebook = false
       Linkedin = false
       Whatsapp = false
       Pinterest = false
       Tumblr = false
-      HackerNews = true
+      HackerNews = false
       Reddit = false
       VK = false
       Buffer = false
       Xing = false
-      Line = true
+      Line = false
       Instapaper = false
       Pocket = false
       Flipboard = false
       Weibo = true
       Blogger = false
-      Baidu = false
+      Baidu = true
       Odnoklassniki = false
       Evernote = false
       Skype = false
@@ -667,6 +604,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
+
 
 
 ```

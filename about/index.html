@@ -38,7 +38,7 @@
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -88,7 +88,15 @@
 <li><a><i class="fas fa-envelope"></i></a> <a href="mailto:bytesc@163.com" rel="">bytesc@163.com</a></li>
 <li><a href="/images/about/wechat.png"><i class="fab fa-weixin"></i> 微信 <i class="fa-solid fa-link"></i> </a></li>
 </ul>
-<img src="/images/about/wechat.png" width = "200"  alt="图片"  />
+<a class="lightgallery" href="/images/about/wechat.png" title="/images/about/wechat.png" data-thumbnail="/images/about/wechat.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/about/wechat.png"
+            data-srcset="/images/about/wechat.png, /images/about/wechat.png 1.5x, /images/about/wechat.png 2x"
+            data-sizes="auto"
+            alt="/images/about/wechat.png" width="200px" height="200px" />
+    </a>
 <h3 id="其它链接">其它链接</h3>
 </div><div id="comments"></div></div></div>
             </main><footer class="footer">

@@ -22,7 +22,9 @@
 - <a><i class="fas fa-envelope"></i></a> bytesc@163.com
 - <a href="/images/about/wechat.png"><i class="fab fa-weixin"></i> 微信 <i class="fa-solid fa-link"></i> </a>
 
-<img src="/images/about/wechat.png" width = "200"  alt="图片"  />
-
+{{< image src="/images/about/wechat.png" width="200px" height="200px">}}
 
 ### 其它链接
+
+
+
