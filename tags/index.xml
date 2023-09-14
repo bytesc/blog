@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - 标签 - 我的全新 Hugo 网站</title>
+        <title>Tags - 标签 - BYTESC blog</title>
         <link>http://example.org/tags/</link>
-        <description>Tags - 标签 - 我的全新 Hugo 网站</description>
+        <description>Tags - 标签 - BYTESC blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
             <webMaster>bytesc@163.com (bytesc)</webMaster><lastBuildDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
     <title>标签1</title>

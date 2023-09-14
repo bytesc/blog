@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>类型2 - 分类 - 我的全新 Hugo 网站</title>
+        <title>类型2 - 分类 - BYTESC blog</title>
         <link>http://example.org/categories/%E7%B1%BB%E5%9E%8B2/</link>
-        <description>类型2 - 分类 - 我的全新 Hugo 网站</description>
+        <description>类型2 - 分类 - BYTESC blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
             <webMaster>bytesc@163.com (bytesc)</webMaster><lastBuildDate>Wed, 04 Mar 2020 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E7%B1%BB%E5%9E%8B2/" rel="self" type="application/rss+xml" /><item>
     <title>我的第二篇文章</title>
