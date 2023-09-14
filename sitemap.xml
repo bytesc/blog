@@ -19,7 +19,4 @@
             <loc>http://example.org/tags/windows/</loc><lastmod>2023-09-13T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/categories/%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83/</loc><lastmod>2023-09-13T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc><lastmod>2023-09-13T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.org/about/</loc><lastmod>2020-03-04T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.org/tags/%E6%A0%87%E7%AD%BE1/</loc><lastmod>2023-03-04T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.org/categories/%E7%B1%BB%E5%9E%8B1/</loc><lastmod>2023-03-04T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.org/first_post/</loc><lastmod>2023-03-04T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>http://example.org/about/</loc><lastmod>2020-03-04T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

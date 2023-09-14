@@ -14,9 +14,11 @@ mysql --version
 ```
 
 ### 查看服务
+```bash
 netstat -tap | grep mysql
 netstat -ano
 netstat -anp
+```
 
 ### 登录
 

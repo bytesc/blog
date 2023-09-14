@@ -4,7 +4,7 @@
         <link>http://example.org/categories/</link>
         <description>Categories - 分类 - BYTESC blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
-            <webMaster>bytesc@163.com (bytesc)</webMaster><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
     <title>常用环境</title>
     <link>http://example.org/categories/%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
@@ -18,14 +18,6 @@
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>bytesc</author>
     <guid>http://example.org/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>类型1</title>
-    <link>http://example.org/categories/%E7%B1%BB%E5%9E%8B1/</link>
-    <pubDate>Mon, 04 Mar 2019 15:58:26 &#43;0800</pubDate>
-    <author>bytesc</author>
-    <guid>http://example.org/categories/%E7%B1%BB%E5%9E%8B1/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

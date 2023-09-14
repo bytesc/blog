@@ -4,13 +4,15 @@
         <link>http://example.org/tags/windows/</link>
         <description>Windows - 标签 - BYTESC blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
-            <webMaster>bytesc@163.com (bytesc)</webMaster><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/windows/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/windows/" rel="self" type="application/rss+xml" /><item>
     <title>MySql快速安装</title>
     <link>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</guid>
-    <description><![CDATA[MySql快速安装 Linux安装 安装 1 2 3 4 sudo su sudo apt update sudo apt install mysql-server mysql --version 查看服务 netstat -tap | grep mysql netstat -ano netstat -anp 登录 1 mysql -u root -p 改密码 1 2 ALTER user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED with mysql_native_password BY &#39;123456&#39;; quit 远程访]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/mysql2.png" referrerpolicy="no-referrer">
+            </div>MySql快速安装 Linux安装 安装 1 2 3 4 sudo su sudo apt update sudo apt install mysql-server mysql --version 查看服务 1 2 3 netstat -tap | grep mysql netstat -ano netstat -anp 登录 1 mysql -u root -p 改密码 1 2 ALTER user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED with mysql_native_password BY &#39;123456&#39;; quit]]></description>
 </item>
 </channel>
 </rss>

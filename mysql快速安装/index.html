@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>MySql快速安装 - BYTESC blog</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="MySql快速安装" />
-<meta property="og:description" content="MySql快速安装 Linux安装 安装 1 2 3 4 sudo su sudo apt update sudo apt install mysql-server mysql --version 查看服务 netstat -tap | grep mysql netstat -ano netstat -anp 登录 1 mysql -u root -p 改密码 1 2 ALTER user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED with mysql_native_password BY &#39;123456&#39;; quit 远程访" />
+<meta property="og:description" content="MySql快速安装 Linux安装 安装 1 2 3 4 sudo su sudo apt update sudo apt install mysql-server mysql --version 查看服务 1 2 3 netstat -tap | grep mysql netstat -ano netstat -anp 登录 1 mysql -u root -p 改密码 1 2 ALTER user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED with mysql_native_password BY &#39;123456&#39;; quit" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-09-13T15:58:26+08:00" />
@@ -14,11 +14,11 @@
 <meta name="twitter:image" content="http://example.org/logo.png"/>
 
 <meta name="twitter:title" content="MySql快速安装"/>
-<meta name="twitter:description" content="MySql快速安装 Linux安装 安装 1 2 3 4 sudo su sudo apt update sudo apt install mysql-server mysql --version 查看服务 netstat -tap | grep mysql netstat -ano netstat -anp 登录 1 mysql -u root -p 改密码 1 2 ALTER user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED with mysql_native_password BY &#39;123456&#39;; quit 远程访"/>
+<meta name="twitter:description" content="MySql快速安装 Linux安装 安装 1 2 3 4 sudo su sudo apt update sudo apt install mysql-server mysql --version 查看服务 1 2 3 netstat -tap | grep mysql netstat -ano netstat -anp 登录 1 mysql -u root -p 改密码 1 2 ALTER user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED with mysql_native_password BY &#39;123456&#39;; quit"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" /><link rel="prev" href="http://example.org/first_post/" /><link rel="next" href="http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" /><link rel="next" href="http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85\/"
-        },"genre": "posts","keywords": "Mysql, Linux, Windows","wordcount":  401 ,
-        "url": "http:\/\/example.org\/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85\/","datePublished": "2023-09-13T15:58:26+08:00","dateModified": "2023-09-13T15:58:26+08:00","publisher": {
+        },"genre": "posts","keywords": "Mysql, Linux, Windows","wordcount":  404 ,
+        "url": "http:\/\/example.org\/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85\/","datePublished": "2023-09-13T15:58:26+08:00","dateModified": "2023-09-13T15:58:26+08:00","license": "bytesc","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -71,9 +71,16 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">MySql快速安装</h1><h2 class="single-subtitle">记录一些MySql安装命令</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>bytesc</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>常用环境</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-13">2023-09-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 401 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-13">2023-09-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 404 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="true">
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/cover/mysql2.png"
+        data-srcset="/images/cover/mysql2.png, /images/cover/mysql2.png 1.5x, /images/cover/mysql2.png 2x"
+        data-sizes="auto"
+        alt="/images/cover/mysql2.png"
+        title="/images/cover/mysql2.png" width="681" height="346" /></div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
@@ -123,10 +130,19 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="查看服务">查看服务</h3>
-<p>netstat -tap | grep mysql
-netstat -ano
-netstat -anp</p>
-<h3 id="登录">登录</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">netstat -tap <span class="p">|</span> grep mysql
+</span></span><span class="line"><span class="cl">netstat -ano
+</span></span><span class="line"><span class="cl">netstat -anp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="登录">登录</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -380,7 +396,7 @@ my.ini添加：</p>
                             <a class="link-to-markdown" href="/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装" data-hashtags="Mysql,Linux,Windows"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-hashtag="Mysql"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装" data-hashtags="Mysql,Linux,Windows"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-hashtag="Mysql"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" data-title="MySql快速安装" data-image="/images/cover/mysql2.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -392,7 +408,7 @@ my.ini添加：</p>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/first_post/" class="prev" rel="prev" title="我的第一篇文章"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>我的第一篇文章</a>
+    <div class="post-nav">
             <a href="/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="next" rel="next" title="MySql常用命令">MySql常用命令<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
