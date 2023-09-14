@@ -12,5 +12,13 @@
     <guid>http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[Git常用命令 基本设置 设置用户信息 1 2 3 git config --global user.name &#34; &#34; git config --global user.email &#34; &#34; git config --list 创建仓库 1 git init 取消NTFS格式保护 1 git config core.protectNTFS false 改缓存大小 1 2 3 4 5 6 7 git]]></description>
 </item>
+<item>
+    <title>MySql常用命令</title>
+    <link>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[MySql常用命令 基本操作 分隔符设置 1 2 DELIMITER $$ DELIMITER ; 执行sql文件 1 2 mysql -uroot -ppassword -Dmy_database &lt; my_script.sql source my_script.sql; DDL 数据库 1 2 3 4 5 6 7 show databases; select database(); create database [if not exists] 数据库名 [default charset utf8mb4] [collate 排]]></description>
+</item>
 </channel>
 </rss>

@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Mysql - 标签 - BYTESC blog</title>
+        <link>http://example.org/tags/mysql/</link>
+        <description>Mysql - 标签 - BYTESC blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
+            <webMaster>bytesc@163.com (bytesc)</webMaster><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+    <title>MySql常用命令</title>
+    <link>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[MySql常用命令 基本操作 分隔符设置 1 2 DELIMITER $$ DELIMITER ; 执行sql文件 1 2 mysql -uroot -ppassword -Dmy_database &lt; my_script.sql source my_script.sql; DDL 数据库 1 2 3 4 5 6 7 show databases; select database(); create database [if not exists] 数据库名 [default charset utf8mb4] [collate 排]]></description>
+</item>
+<item>
+    <title>MySql快速安装</title>
+    <link>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</guid>
+    <description><![CDATA[MySql快速安装 Linux安装 安装 1 2 3 4 sudo su sudo apt update sudo apt install mysql-server mysql --version 查看服务 netstat -tap | grep mysql netstat -ano netstat -anp 登录 1 mysql -u root -p 改密码 1 2 ALTER user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED with mysql_native_password BY &#39;123456&#39;; quit 远程访]]></description>
+</item>
+</channel>
+</rss>

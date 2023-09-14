@@ -1,18 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>常用环境 - 分类 - BYTESC blog</title>
-        <link>http://example.org/categories/%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83/</link>
-        <description>常用环境 - 分类 - BYTESC blog</description>
+        <title>Linux - 标签 - BYTESC blog</title>
+        <link>http://example.org/tags/linux/</link>
+        <description>Linux - 标签 - BYTESC blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
-            <webMaster>bytesc@163.com (bytesc)</webMaster><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83/" rel="self" type="application/rss+xml" /><item>
-    <title>Hugo快速配置</title>
-    <link>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</link>
-    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</guid>
-    <description><![CDATA[Hugo快速配置 Hugo安装 1 2 3 4 5 6 7 8 #linux: sudo snap install hugo #win: #提前安装golang和git go env -w GOPROXY=https://goproxy.cn,direct go install -tags extended github.com/gohugoio/hugo@latest hugo version 创建项目 初始化 1 2 3 4 go mod init bytesc_blog hugo]]></description>
-</item>
-<item>
+            <webMaster>bytesc@163.com (bytesc)</webMaster><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Linux系统常用命令</title>
     <link>http://example.org/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>

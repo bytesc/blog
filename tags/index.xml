@@ -29,6 +29,30 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Linux</title>
+    <link>http://example.org/tags/linux/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>bytesc</author>
+    <guid>http://example.org/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Mysql</title>
+    <link>http://example.org/tags/mysql/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>bytesc</author>
+    <guid>http://example.org/tags/mysql/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Windows</title>
+    <link>http://example.org/tags/windows/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>bytesc</author>
+    <guid>http://example.org/tags/windows/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>标签1</title>
     <link>http://example.org/tags/%E6%A0%87%E7%AD%BE1/</link>
     <pubDate>Mon, 04 Mar 2019 15:58:26 &#43;0800</pubDate>
