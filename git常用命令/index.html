@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Git常用命令 - BYTESC blog</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Git常用命令" />
+<meta property="og:description" content="Git常用命令 基本设置 设置用户信息 1 2 3 git config --global user.name &#34; &#34; git config --global user.email &#34; &#34; git config --list 创建仓库 1 git init 取消NTFS格式保护 1 git config core.protectNTFS false 改缓存大小 1 2 3 4 5 6 7 git" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-13T15:58:26+08:00" />
+<meta property="article:modified_time" content="2023-09-13T15:58:26+08:00" /><meta property="og:site_name" content="我的网站" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/logo.png"/>
+
+<meta name="twitter:title" content="Git常用命令"/>
+<meta name="twitter:description" content="Git常用命令 基本设置 设置用户信息 1 2 3 git config --global user.name &#34; &#34; git config --global user.email &#34; &#34; git config --list 创建仓库 1 git init 取消NTFS格式保护 1 git config core.protectNTFS false 改缓存大小 1 2 3 4 5 6 7 git"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><link rel="prev" href="http://example.org/first_post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Git常用命令",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4\/"
+        },"genre": "posts","keywords": "Git","wordcount":  1530 ,
+        "url": "http:\/\/example.org\/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4\/","datePublished": "2023-09-13T15:58:26+08:00","dateModified": "2023-09-13T15:58:26+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "bytesc"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="BYTESC blog"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="BYTESC blog"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Git常用命令</h1><h2 class="single-subtitle">一些git版本管理工具的常用命令</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>bytesc</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>常用命令</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-13">2023-09-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1530 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#基本设置">基本设置</a>
+      <ul>
+        <li><a href="#设置用户信息">设置用户信息</a></li>
+        <li><a href="#创建仓库">创建仓库</a></li>
+        <li><a href="#取消ntfs格式保护">取消NTFS格式保护</a></li>
+        <li><a href="#改缓存大小">改缓存大小</a></li>
+      </ul>
+    </li>
+    <li><a href="#基础操作指令">基础操作指令</a>
+      <ul>
+        <li><a href="#添加和提交">添加和提交</a></li>
+        <li><a href="#状态和日志">状态和日志</a></li>
+        <li><a href="#版本回退">版本回退</a></li>
+      </ul>
+    </li>
+    <li><a href="#分支操作">分支操作</a>
+      <ul>
+        <li><a href="#分支基本操作">分支基本操作</a></li>
+        <li><a href="#撤销某一次提交">撤销某一次提交</a></li>
+        <li><a href="#标签">标签</a></li>
+      </ul>
+    </li>
+    <li><a href="#远程仓库">远程仓库</a>
+      <ul>
+        <li><a href="#关联远程仓库">关联远程仓库</a></li>
+        <li><a href="#关联远程分支">关联远程分支</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见操作流程">常见操作流程</a>
+      <ul>
+        <li><a href="#解决冲突">解决冲突</a></li>
+        <li><a href="#撤销误commit">撤销误commit</a></li>
+      </ul>
+    </li>
+    <li><a href="#其它配置">其它配置</a>
+      <ul>
+        <li><a href="#gitignore">.gitignore</a></li>
+        <li><a href="#别名文件">别名文件</a></li>
+        <li><a href="#手动dns">手动DNS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="git常用命令">Git常用命令</h1>
+<h2 id="基本设置">基本设置</h2>
+<h3 id="设置用户信息">设置用户信息</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl">git config --list
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="创建仓库">创建仓库</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="取消ntfs格式保护">取消NTFS格式保护</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config core.protectNTFS <span class="nb">false</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="改缓存大小">改缓存大小</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global http.postBuffer <span class="m">524288000</span>
+</span></span><span class="line"><span class="cl">git config --global sendpack.sideband <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --global http.sslVerify <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">git config --global https.sslVerify <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">git config --global http.postBuffer <span class="m">1048576000</span>
+</span></span><span class="line"><span class="cl">git config --global https.postBuffer <span class="m">1048576000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="基础操作指令">基础操作指令</h2>
+<h3 id="添加和提交">添加和提交</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone <span class="o">[</span>仓库地址<span class="o">]</span> -b <span class="o">[</span>分支名<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl"><span class="c1"># (在.gitignore文件中添加文件名即可忽略文件  eg: “*.txt”  “.idea”)</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34; &#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="状态和日志">状态和日志</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git log --pretty<span class="o">=</span>oneline --abbrev-commit --all --
+</span></span><span class="line"><span class="cl">git log --decorate
+</span></span><span class="line"><span class="cl">git log --graph
+</span></span><span class="line"><span class="cl">git reflog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="版本回退">版本回退</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --hard commitID <span class="o">(</span>版本回退<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#--soft模式会撤消当前提交，但保留更改。</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#这意味着，已撤消的提交的更改将重新出现在暂存区中，可以重新提交。</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#例如，要回退到上一个提交并保留更改，可以运行以下命令：</span>
+</span></span><span class="line"><span class="cl">git reset --soft HEAD~
+</span></span><span class="line"><span class="cl"><span class="c1">#--mixed模式是默认的模式，它会撤销当前提交并取消对暂存区的更改。</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#这意味着，已撤消的提交的更改将保留在工作目录中，但不会出现在暂存区中。</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#例如，要回退到上一个提交并取消对暂存区的更改，可以运行以下命令：</span>
+</span></span><span class="line"><span class="cl">git reset --mixed HEAD~
+</span></span><span class="line"><span class="cl"><span class="c1">#--hard模式是最强大的模式，它会彻底删除已撤消的提交的更改。</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#这意味着，已撤消的提交的更改将不再存在于工作目录或暂存区中。请注意，使用--hard模式将永久删除更改，无法恢复。</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#例如，要回退到上一个提交并彻底删除所有更改，可以运行以下命令：</span>
+</span></span><span class="line"><span class="cl">git reset --hard HEAD~
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git restore --staged index.html <span class="c1">#恢复已经删除的文件</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="分支操作">分支操作</h2>
+<h3 id="分支基本操作">分支基本操作</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch <span class="o">[</span>分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -vv:查看远程分支 --all所有分支</span>
+</span></span><span class="line"><span class="cl">git branch -D <span class="o">[</span>分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git checkout <span class="o">[</span>分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git switch <span class="o">[</span>分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git merge <span class="o">[</span>分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#(git fetch + git merge == git pull)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="撤销某一次提交">撤销某一次提交</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git revert <span class="o">[</span>commitid<span class="o">]</span> <span class="c1">#(删除某次提交)</span>
+</span></span><span class="line"><span class="cl">git revert -m <span class="m">1</span> <span class="o">[</span>commitid<span class="o">]</span> <span class="c1">#(删除merge, -m 1表示保留1号)</span>
+</span></span><span class="line"><span class="cl">git revert HEAD    <span class="c1"># 撤销前一次的 commit </span>
+</span></span><span class="line"><span class="cl">git revert HEAD^ <span class="c1"># 撤销前前一次的 commit</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#1.手动解决冲突，然后提交</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#2.git revert --abort 取消撤回，不解决冲突了</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="标签">标签</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git tag -l
+</span></span><span class="line"><span class="cl">git tag -a v0.1.1 -m <span class="s2">&#34;  &#34;</span>
+</span></span><span class="line"><span class="cl">git tag -d <span class="o">[</span>tagname<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git push origin :refs/tags/<span class="o">[</span>tagname<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git checkout -b <span class="o">[</span>分支名称<span class="o">]</span> <span class="o">[</span>tag标签名称<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git show <span class="o">[</span>tagname<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git push origin <span class="o">[</span>tagname<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git push origin --tags
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="远程仓库">远程仓库</h2>
+<h3 id="关联远程仓库">关联远程仓库</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote -v
+</span></span><span class="line"><span class="cl">git remote add origin git@gitee.com:bytesc/git_test03.git
+</span></span><span class="line"><span class="cl">git remote set-url origin git@gitee.com:bytesc/git_test03.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="关联远程分支">关联远程分支</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch --set-upstream-to<span class="o">=</span>origin/<span class="o">[</span>远程分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl">git push -u origin <span class="o">[</span>远程分支名<span class="o">]</span>:<span class="o">[</span>本地分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push origin <span class="o">[</span>远程分支名<span class="o">]</span>  <span class="c1">#(新建远程分支)</span>
+</span></span><span class="line"><span class="cl">git push origin :<span class="o">[</span>远程分支名<span class="o">]</span> <span class="c1">#(删除远程分支)</span>
+</span></span><span class="line"><span class="cl">git push origin --delete <span class="o">[</span>远程分支名<span class="o">]</span> <span class="c1">#(删除远程分支)</span>
+</span></span><span class="line"><span class="cl">git push <span class="o">[</span>-f<span class="o">]</span> --set-upstream origin <span class="o">[</span>本地分支名<span class="o">]</span>:<span class="o">[</span>远程分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -f:强制覆盖  --set-upstream:关联当前分支与远程分枝  </span>
+</span></span><span class="line"><span class="cl">git pull <span class="o">[</span>-u<span class="o">]</span> origin <span class="o">[</span>远程分支名<span class="o">]</span>:<span class="o">[</span>本地分支名<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git remote prune origin <span class="c1">#(删除本地存在但是远程没有的分支)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="常见操作流程">常见操作流程</h2>
+<h3 id="解决冲突">解决冲突</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">先fetch远程仓库，再merge远程分支到本地分支
+</span></span><span class="line"><span class="cl">merge后修改冲突文件，重新add，commit，push
+</span></span><span class="line"><span class="cl">对于fork的他人仓库，可以通过add remote他人仓库再同步
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="撤销误commit">撤销误commit</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --mixed HEAD^
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="其它配置">其它配置</h2>
+<h3 id="gitignore">.gitignore</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">*.txt  ，*.xls  表示过滤某种类型的文件
+</span></span><span class="line"><span class="cl">target/ ：表示过滤这个文件夹下的所有文件
+</span></span><span class="line"><span class="cl">/test/a.txt ，/test/b.xls  表示指定过滤某个文件下具体文件
+</span></span><span class="line"><span class="cl">!*.java , !/dir/test/     !开头表示不过滤
+</span></span><span class="line"><span class="cl">*.[ab]    支持通配符：过滤所有以.a或者.b为扩展名的文件
+</span></span><span class="line"><span class="cl">/test  仅仅忽略项目根目录下的 test 文件，不包括 child/test等非根目录的test目录
+</span></span><span class="line"><span class="cl">以”#”号开头表示注释；
+</span></span><span class="line"><span class="cl">以斜杠“/”开头表示目录；
+</span></span><span class="line"><span class="cl">以星号“*”通配多个字符；
+</span></span><span class="line"><span class="cl">以问号“?”通配单个字符
+</span></span><span class="line"><span class="cl">以方括号“[]”包含单个字符的匹配列表；
+</span></span><span class="line"><span class="cl">以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">把已经脱管的文件ignore
+</span></span><span class="line"><span class="cl">git rm -r --cached Front_page/.idea
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="别名文件">别名文件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch ~/.bashrc <span class="c1">#(在用户目录下)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 内容：&#34;alias ll=&#39;ls -al&#39;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="手动dns">手动DNS</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">查询服务器ip：
+</span></span><span class="line"><span class="cl">https://myssl.com/dns_check.html#dns_check
+</span></span><span class="line"><span class="cl">github.com
+</span></span><span class="line"><span class="cl">raw.githubusercontent.com
+</span></span><span class="line"><span class="cl">添加域名解析到hosts：
+</span></span><span class="line"><span class="cl">vim /etc/hosts
+</span></span><span class="line"><span class="cl">末尾添加
+</span></span><span class="line"><span class="cl">20.205.243.166 github.com
+</span></span><span class="line"><span class="cl">185.199.109.133 raw.githubusercontent.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-09-13</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-title="Git常用命令" data-hashtags="Git"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-hashtag="Git"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-title="Git常用命令"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-title="Git常用命令"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-title="Git常用命令"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/git/">Git</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/first_post/" class="prev" rel="prev" title="我的第一篇文章"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>我的第一篇文章</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">bytesc</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a class="text-reset" href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2023015078号-2</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"data":{"id-1":"BYTESC","id-2":"BYTESC"},"lightgallery":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
