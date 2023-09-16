@@ -7,11 +7,13 @@
 
 ##### 项目展示
 - <a href="http://www.bytesc.top"><i class="fa-solid fa-globe"></i> 个人项目门户网站 <i class="fa-solid fa-link"></i> </a>
-- <a href="http://github.bytesc.top"><i class="fa-solid fa-globe"></i> 个人项目门户网站（备用链接） <i class="fa-solid fa-link"></i> </a>
+- <a href="https://www.g.bytesc.top"><i class="fa-solid fa-globe"></i> 个人项目门户网站（备用链接） <i class="fa-solid fa-link"></i> </a>
+- <a href="https://bytesc.gitee.io/www"><i class="fa-solid fa-globe"></i> 个人项目门户网站（备用链接） <i class="fa-solid fa-link"></i> </a>
 
 ##### 个人博客
 - <a href="http://blog.bytesc.top"><i class="fa-solid fa-globe"></i> 个人博客网站 <i class="fa-solid fa-link"></i> </a>
-- <a href="http://blog.github.bytesc.top"><i class="fa-solid fa-globe"></i> 个人博客网站（备用链接） <i class="fa-solid fa-link"></i> </a>
+- <a href="https://blog.g.bytesc.top"><i class="fa-solid fa-globe"></i> 个人博客网站（备用链接） <i class="fa-solid fa-link"></i> </a>
+- <a href="https://bytesc.gitee.io"><i class="fa-solid fa-globe"></i> 个人博客网站（备用链接） <i class="fa-solid fa-link"></i> </a>
 
 ### 代码仓库
 - <a href="https://github.com/bytesc"><i class="fab fa-github"></i></i> Github <i class="fa-solid fa-link"></i> </a>
@@ -25,6 +27,9 @@
 {{< image src="/images/about/wechat.png" width="200px" height="200px">}}
 
 ### 其它链接
+
+- <a href="https://kalipolis.gitee.io"><i class="fa-solid fa-globe"></i> 我的朋友：kalipolis的博客 <i class="fa-solid fa-link"></i> </a>
+
 
 
 
