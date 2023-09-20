@@ -7,64 +7,94 @@
             <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>conda 常用命令</title>
-    <link>http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/cover/conda.png" referrerpolicy="no-referrer">
-            </div>记录一些MySql安装命令]]></description>
-</item>
-<item>
-    <title>Git常用命令</title>
+    <title>Git 常用命令</title>
     <link>http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/git.png" referrerpolicy="no-referrer">
-            </div>一些git版本管理工具的常用命令]]></description>
+            </div>一些 git 版本管理工具的常用命令]]></description>
 </item>
 <item>
-    <title>Hugo快速配置</title>
+    <title>Hugo 快速配置</title>
     <link>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/hugo.png" referrerpolicy="no-referrer">
-            </div>快速配置Hugo的方法]]></description>
+            </div>快速配置 Hugo 的方法]]></description>
 </item>
 <item>
-    <title>Linux系统常用命令</title>
+    <title>Linux swap 分区配置</title>
+    <link>http://example.org/linux-swap%E5%88%86%E5%8C%BA/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/linux-swap%E5%88%86%E5%8C%BA/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/linux3.png" referrerpolicy="no-referrer">
+            </div>Linux swap 分区配置]]></description>
+</item>
+<item>
+    <title>Linux 环境变量</title>
+    <link>http://example.org/linux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/linux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/linux2.png" referrerpolicy="no-referrer">
+            </div>记录一些 Linux 环境变量配置方法]]></description>
+</item>
+<item>
+    <title>Linux 系统常用命令</title>
     <link>http://example.org/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/linux.png" referrerpolicy="no-referrer">
-            </div>记录一些Linux系统常用命令]]></description>
+            </div>记录一些 Linux 系统常用命令]]></description>
 </item>
 <item>
-    <title>MySql常用命令</title>
+    <title>MySql 常用命令</title>
     <link>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/mysql.png" referrerpolicy="no-referrer">
-            </div>记录一些MySql常用命令]]></description>
+            </div>记录一些 MySql 常用命令]]></description>
 </item>
 <item>
-    <title>MySql快速安装</title>
+    <title>MySql 快速安装</title>
     <link>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</link>
     <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/mysql2.png" referrerpolicy="no-referrer">
-            </div>记录一些MySql安装命令]]></description>
+            </div>记录一些 MySql 安装命令]]></description>
+</item>
+<item>
+    <title>conda 常用命令</title>
+    <link>http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Tue, 12 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/conda.png" referrerpolicy="no-referrer">
+            </div>记录 conda linux 安装方法和常用命令]]></description>
+</item>
+<item>
+    <title>squid 安装配置</title>
+    <link>http://example.org/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Tue, 12 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/squid.png" referrerpolicy="no-referrer">
+            </div>squid 代理工具（不是VPN）linux 安装配置]]></description>
 </item>
 </channel>
 </rss>

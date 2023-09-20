@@ -4,33 +4,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>conda 常用命令 - BYTESC blog</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="conda 常用命令" />
-<meta property="og:description" content="记录 conda linux 安装方法和常用命令" />
+        <title>squid 安装配置 - BYTESC blog</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="squid 安装配置" />
+<meta property="og:description" content="squid 代理工具（不是VPN）linux 安装配置" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://example.org/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-09-12T15:58:26+08:00" />
 <meta property="article:modified_time" content="2023-09-12T15:58:26+08:00" /><meta property="og:site_name" content="我的网站" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://example.org/logo.png"/>
 
-<meta name="twitter:title" content="conda 常用命令"/>
-<meta name="twitter:description" content="记录 conda linux 安装方法和常用命令"/>
+<meta name="twitter:title" content="squid 安装配置"/>
+<meta name="twitter:description" content="squid 代理工具（不是VPN）linux 安装配置"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><link rel="prev" href="http://example.org/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" /><link rel="next" href="http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" /><link rel="next" href="http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "conda 常用命令",
+        "headline": "squid 安装配置",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.org\/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4\/"
-        },"genre": "posts","keywords": "Python, Conda, Linux","wordcount":  164 ,
-        "url": "http:\/\/example.org\/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4\/","datePublished": "2023-09-12T15:58:26+08:00","dateModified": "2023-09-12T15:58:26+08:00","license": "bytesc","publisher": {
+            "@id": "http:\/\/example.org\/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE\/"
+        },"genre": "posts","keywords": "squid, Linux","wordcount":  103 ,
+        "url": "http:\/\/example.org\/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE\/","datePublished": "2023-09-12T15:58:26+08:00","dateModified": "2023-09-12T15:58:26+08:00","license": "bytesc","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -69,56 +69,43 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">conda 常用命令</h1><h2 class="single-subtitle">记录 conda linux 安装方法和常用命令</h2><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>bytesc</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>常用命令</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-12">2023-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 164 字&nbsp;
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">squid 安装配置</h1><h2 class="single-subtitle">squid 代理工具（不是VPN）linux 安装配置</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>bytesc</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>常用环境</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-12">2023-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 103 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/images/cover/conda.png"
-        data-srcset="/images/cover/conda.png, /images/cover/conda.png 1.5x, /images/cover/conda.png 2x"
+        data-src="/images/cover/squid.png"
+        data-srcset="/images/cover/squid.png, /images/cover/squid.png 1.5x, /images/cover/squid.png 2x"
         data-sizes="auto"
-        alt="/images/cover/conda.png"
-        title="/images/cover/conda.png" width="1076" height="589" /></div><div class="details toc" id="toc-static"  data-kept="">
+        alt="/images/cover/squid.png"
+        title="/images/cover/squid.png" width="637" height="356" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#linux-安装">linux 安装</a></li>
-    <li><a href="#查看环境">查看环境</a></li>
-    <li><a href="#环境管理">环境管理</a></li>
-    <li><a href="#package-管理">package 管理</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#服务">服务</a></li>
+    <li><a href="#配置">配置</a></li>
+    <li><a href="#开机启动">开机启动</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="conda-常用命令">conda 常用命令</h1>
-<h2 id="linux-安装">linux 安装</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-</span></span><span class="line"><span class="cl">bash Miniconda3-latest-Linux-x86_64.sh
-</span></span><span class="line"><span class="cl"><span class="c1"># 一直输入yes</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="查看环境">查看环境</h2>
+            </div><div class="content" id="content"><h1 id="squid安装配置">squid安装配置</h1>
+<h2 id="安装">安装</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda env list 
-</span></span><span class="line"><span class="cl">conda config --set auto_activate_base <span class="nb">false</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install squid
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="环境管理">环境管理</h2>
+</div><h2 id="服务">服务</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -126,44 +113,55 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 创建环境</span>
-</span></span><span class="line"><span class="cl">conda create -n env_name <span class="nv">python</span><span class="o">=</span>x.x
-</span></span><span class="line"><span class="cl"><span class="c1"># 删除环境</span>
-</span></span><span class="line"><span class="cl">conda remove -n env_name --all
-</span></span><span class="line"><span class="cl"><span class="c1"># 激活环境</span>
-</span></span><span class="line"><span class="cl">conda activate env_name
-</span></span><span class="line"><span class="cl"><span class="c1"># 关闭环境</span>
-</span></span><span class="line"><span class="cl">conda deactivate
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status squid
+</span></span><span class="line"><span class="cl">netstat -an <span class="p">|</span> grep <span class="m">3145</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 默认3145端口</span>
+</span></span><span class="line"><span class="cl">sudo systemctl start squid
+</span></span><span class="line"><span class="cl">sudo systemctl stop squid
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="package-管理">package 管理</h2>
+</div><h2 id="配置">配置</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/squid/squid.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>文件内容 16% 处</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda list
-</span></span><span class="line"><span class="cl"><span class="c1"># 安装某个package</span>
-</span></span><span class="line"><span class="cl">conda install <span class="o">[</span>package<span class="o">]</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 删除某个package</span>
-</span></span><span class="line"><span class="cl">conda remove <span class="o">[</span>package<span class="o">]</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 更新某个package</span>
-</span></span><span class="line"><span class="cl">conda update <span class="o">[</span>package<span class="o">]</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 更新conda，保持conda最新</span>
-</span></span><span class="line"><span class="cl">conda update conda
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl"># http_access deny all
+</span></span><span class="line"><span class="cl">http_access allow all
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>22%处</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl"># Squid normally listens to port 3128
+</span></span><span class="line"><span class="cl">http_port 3145
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="开机启动">开机启动</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> squid.service
+</span></span><span class="line"><span class="cl">sudo systemctl disable squid.service
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
@@ -174,23 +172,23 @@
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-title="conda 常用命令" data-image="/images/cover/conda.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="http://example.org/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-title="conda 常用命令"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.org/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" data-title="squid 安装配置" data-image="/images/cover/squid.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="http://example.org/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" data-title="squid 安装配置"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/conda/">Conda</a>,&nbsp;<a href="/tags/linux/">Linux</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/squid/">squid</a>,&nbsp;<a href="/tags/linux/">Linux</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/squid%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" class="prev" rel="prev" title="squid 安装配置"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>squid 安装配置</a>
-            <a href="/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/" class="next" rel="next" title="MySql 快速安装">MySql 快速安装<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav">
+            <a href="/conda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="next" rel="next" title="conda 常用命令">conda 常用命令<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
