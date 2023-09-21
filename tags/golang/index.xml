@@ -4,10 +4,10 @@
         <link>http://example.org/tags/golang/</link>
         <description>Golang - 标签 - BYTESC blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
-            <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/golang/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Tue, 12 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/golang/" rel="self" type="application/rss+xml" /><item>
     <title>Hugo 快速配置</title>
     <link>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</link>
-    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <pubDate>Tue, 12 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</guid>
     <description><![CDATA[<div class="featured-image">
