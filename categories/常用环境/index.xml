@@ -25,16 +25,6 @@
             </div>记录一些 Linux 环境变量配置方法]]></description>
 </item>
 <item>
-    <title>MySql 快速安装</title>
-    <link>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</link>
-    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/cover/mysql2.png" referrerpolicy="no-referrer">
-            </div>记录一些 MySql 安装命令]]></description>
-</item>
-<item>
     <title>Hugo 快速配置</title>
     <link>http://example.org/hugo%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</link>
     <pubDate>Tue, 12 Sep 2023 15:58:26 &#43;0800</pubDate>
@@ -43,6 +33,16 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/hugo.png" referrerpolicy="no-referrer">
             </div>快速配置 Hugo 的方法]]></description>
+</item>
+<item>
+    <title>MySql 快速安装</title>
+    <link>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</link>
+    <pubDate>Tue, 12 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/mysql2.png" referrerpolicy="no-referrer">
+            </div>记录一些 MySql 安装命令]]></description>
 </item>
 <item>
     <title>squid 安装配置</title>
