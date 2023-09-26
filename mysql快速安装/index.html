@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85\/"
-        },"genre": "posts","keywords": "Mysql, Linux, Windows","wordcount":  404 ,
+        },"genre": "posts","keywords": "Mysql, Linux, Windows","wordcount":  458 ,
         "url": "http:\/\/example.org\/mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85\/","datePublished": "2023-09-12T15:58:26+08:00","dateModified": "2023-09-12T15:58:26+08:00","license": "bytesc","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -71,7 +71,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">MySql 快速安装</h1><h2 class="single-subtitle">记录一些 MySql 安装命令</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>bytesc</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>常用环境</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-12">2023-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 404 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-12">2023-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 458 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -93,6 +93,7 @@
         <li><a href="#查看服务">查看服务</a></li>
         <li><a href="#登录">登录</a></li>
         <li><a href="#改密码">改密码</a></li>
+        <li><a href="#跳过密码验证">跳过密码验证</a></li>
         <li><a href="#远程访问授权">远程访问授权</a></li>
         <li><a href="#开关服务">开关服务</a></li>
         <li><a href="#查看">查看</a></li>
@@ -162,6 +163,26 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">quit</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="跳过密码验证">跳过密码验证</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/my.cnf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>末尾添加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[mysqld]
+</span></span><span class="line"><span class="cl">skip-grant-tables
+</span></span></code></pre></td></tr></table>
+</div>
 </div><h3 id="远程访问授权">远程访问授权</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -194,18 +215,42 @@
 </div><h3 id="开关服务">开关服务</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl restart mysql<span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ubuntu</span>
+</span></span><span class="line"><span class="cl">systemctl restart mysql<span class="p">;</span>
 </span></span><span class="line"><span class="cl">systemctl status mysql<span class="p">;</span>
 </span></span><span class="line"><span class="cl">systemctl start
 </span></span><span class="line"><span class="cl">systemctl stop
 </span></span><span class="line"><span class="cl">systemctl reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">service mysql stop
+</span></span><span class="line"><span class="cl">service mysql start
+</span></span><span class="line"><span class="cl">service mysql restart
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/etc/init.d/mysql start
+</span></span><span class="line"><span class="cl">/etc/init.d/mysql stop
+</span></span><span class="line"><span class="cl">/etc/init.d/mysql restart
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># redhat 均为 mysqld</span>
+</span></span><span class="line"><span class="cl">/etc/init.d/mysqld restart
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="查看">查看</h3>
@@ -233,7 +278,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">/etc/my.cnf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/etc/my.cnf
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="备用用户">备用用户</h3>

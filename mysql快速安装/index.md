@@ -33,6 +33,16 @@ ALTER user 'root'@'localhost' IDENTIFIED with mysql_native_password BY '123456';
 quit
 ```
 
+### 跳过密码验证
+```bash
+sudo vim /etc/my.cnf
+```
+末尾添加
+```txt
+[mysqld]
+skip-grant-tables
+```
+
 ### 远程访问授权
 
 ```bash
@@ -51,11 +61,23 @@ flush privileges;
 ### 开关服务
 
 ```bash
+# ubuntu
 systemctl restart mysql;
 systemctl status mysql;
 systemctl start
 systemctl stop
 systemctl reload
+
+service mysql stop
+service mysql start
+service mysql restart
+
+/etc/init.d/mysql start
+/etc/init.d/mysql stop
+/etc/init.d/mysql restart
+
+# redhat 均为 mysqld
+/etc/init.d/mysqld restart
 ```
 
 ### 查看
@@ -69,7 +91,7 @@ SHOW VARIABLES LIKE 'port';
 whereis mysql
 ```
 配置文件位置
-```txt
+```bash
 /etc/my.cnf
 ```
 
