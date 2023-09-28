@@ -4,15 +4,25 @@
         <link>http://example.org/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
         <description>常用命令 - 分类 - BYTESC blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
-            <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Tue, 19 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="self" type="application/rss+xml" /><item>
     <title>Git 常用命令</title>
     <link>http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <pubDate>Tue, 19 Sep 2023 15:58:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.org/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/git.png" referrerpolicy="no-referrer">
             </div>一些 git 版本管理工具的常用命令]]></description>
+</item>
+<item>
+    <title>MySql 常用命令</title>
+    <link>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Mon, 18 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/mysql.png" referrerpolicy="no-referrer">
+            </div>记录一些 MySql 常用命令]]></description>
 </item>
 <item>
     <title>Linux 系统常用命令</title>
@@ -23,16 +33,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cover/linux.png" referrerpolicy="no-referrer">
             </div>记录一些 Linux 系统常用命令]]></description>
-</item>
-<item>
-    <title>MySql 常用命令</title>
-    <link>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.org/mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/cover/mysql.png" referrerpolicy="no-referrer">
-            </div>记录一些 MySql 常用命令]]></description>
 </item>
 <item>
     <title>screen 常用命令</title>

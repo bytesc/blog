@@ -180,7 +180,7 @@ flush privileges;
 ### 权限列表
 
 ```txt
-1)授予数据库权限时，<权限类型>可以指定为以下值：
+(1)授予数据库权限时，<权限类型>可以指定为以下值：
 SELECT：表示授予用户可以使用 SELECT 语句访问特定数据库中所有表和视图的权限。
 INSERT：表示授予用户可以使用 INSERT 语句向特定数据库中所有表添加数据行的权限。
 DELETE：表示授予用户可以使用 DELETE 语句删除特定数据库中所有表的数据行的权限。
@@ -199,7 +199,7 @@ EXECUTE ROUTINE：表示授予用户可以调用特定数据库的存储过程�
 LOCK TABLES：表示授予用户可以锁定特定数据库的已有数据表的权限。
 ALL 或 ALL PRIVILEGES：表示以上所有权限。
 
-2) 授予表权限时，<权限类型>可以指定为以下值：
+(2) 授予表权限时，<权限类型>可以指定为以下值：
 SELECT：授予用户可以使用 SELECT 语句进行访问特定表的权限。
 INSERT：授予用户可以使用 INSERT 语句向一个特定表中添加数据行的权限。
 DELETE：授予用户可以使用 DELETE 语句从一个特定表中删除数据行的权限。
@@ -211,10 +211,10 @@ CREATE：授予用户可以使用特定的名字创建一个数据表的权限�
 INDEX：授予用户可以在表上定义索引的权限。
 ALL 或 ALL PRIVILEGES：所有的权限名。
 
-3) 授予列权限时，<权限类型>的值只能指定为 SELECT、INSERT 和 UPDATE，同时权限后面需要加上列名列表 column-list。
+(3) 授予列权限时，<权限类型>的值只能指定为 SELECT、INSERT 和 UPDATE，同时权限后面需要加上列名列表 column-list。
 grant insert(id, name) on test.priv_test to sam@‘localhost’;
 
-4) 系统·权限。
+(4) 系统·权限。
 CREATE USER：表示授予用户可以创建和删除新用户的权限。
 SHOW DATABASES：表示授予用户可以使用 SHOW DATABASES 语句查看所有已有的数据库的定义的权限。
 FILE：表示授予用户可以使用 LOAD DATA INFILE 和 SELECT … INTO OUTFILE 语句访问服务器上的文件的权限。
@@ -257,10 +257,12 @@ revoke 角色名@主机名 from 用户名@主机名
 
 ```sql
 START TRANSACTION; 
-[SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED|READ COMMITTED|REPEATABLE READ|SERIALIZABLE;]
 -- 一系列的SQL语句，可以包括查询、插入、更新和删除等操作
-COMMIT;
-ROLLBACK;
+COMMIT|ROLLBACK;
+```
+设置事务隔离级别
+```sql
+set global|session transaction isolation level [READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE]
 ```
 
 ### 视图
@@ -445,19 +447,6 @@ schedule:
 -- INTERVAL中包含的时间单位如下:
   {YEAR | QUARTER | MONTH | DAY | HOUR | MINUTE | WEEK | SECOND | YEAR_MONTH | DAY_HOUR | DAY_MINUTE | DAY_SECOND | HOUR_MINUTE | HOUR_SECOND | MINUTE_SECOND}
 
-
--- 例子
-CREATE EVENT demo_event2 
-ON SCHEDULE AT TIMESTAMP '2020-11-20 00:00:00' 
-DO INSERT INTO `demo_1119` (`id`, `name`, `createTime`) VALUES (null, 'tom', NOW())
-
--- 例子
-CREATE EVENT demo_event3 
-ON SCHEDULE EVERY 10 SECOND 
-ON COMPLETION PRESERVE 
-DO INSERT INTO `demo_1119` (`id`, `name`, `createTime`) VALUES (null, '陈哈哈', NOW())
-
-
 show events;
 
 ALTER EVENT event_name ON SCHEDULE EVERY 2 MINUTE;
@@ -468,7 +457,7 @@ ALTER EVENT event_name RENAME TO test_event;
 
 ## 程序举例
 
-### 银行转账例子
+### 银行转账存储过程
 
 ```sql
 CREATE PROCEDURE transfer(
@@ -535,24 +524,136 @@ BEGIN
   SELECT 'Success' AS result;
 END;
 ```
-
-### 锁
-
+避免死锁
 ```sql
-LOCK TABLES my_table WRITE/READ; --表锁
---全局锁（锁数据库）：
-FLUSH TABLES WITH READ LOCK;
--- 执行一些数据备份操作
+CREATE PROCEDURE transfer(
+  IN from_account VARCHAR(50),
+  IN to_account VARCHAR(50),
+  IN amount DECIMAL(10, 2)
+)
+BEGIN
+  DECLARE from_balance DECIMAL(10, 2);
+  DECLARE to_balance DECIMAL(10, 2);
+
+  -- 检查参数是否合法
+  IF from_account = to_account THEN
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Error: same account';
+    LEAVE transfer;
+  END IF;
+
+  IF amount <= 0 THEN
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Error: invalid amount';
+    LEAVE transfer;
+  END IF;
+
+  DECLARE EXIT HANDLER FOR SQLEXCEPTION ROLLBACK;
+
+  START TRANSACTION;
+
+  -- 按照字母顺序访问账户
+  IF from_account < to_account THEN
+    -- 查询和更新转出账户
+    SELECT balance INTO from_balance FROM accounts WHERE account_name = from_account FOR UPDATE;
+    IF from_balance < amount THEN
+      SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Error: insufficient balance';
+      ROLLBACK;
+      LEAVE transfer;
+    END IF;
+    UPDATE accounts SET balance = balance - amount WHERE account_name = from_account;
+
+    -- 查询和更新转入账户
+    SELECT balance INTO to_balance FROM accounts WHERE account_name = to_account FOR UPDATE;
+    UPDATE accounts SET balance = balance + amount WHERE account_name = to_account;
+  ELSE
+    -- 查询和更新转入账户
+    SELECT balance INTO to_balance FROM accounts WHERE account_name = to_account FOR UPDATE;
+    UPDATE accounts SET balance = balance + amount WHERE account_name = to_account;
+
+    -- 查询和更新转出账户
+    SELECT balance INTO from_balance FROM accounts WHERE account_name = from_account FOR UPDATE;
+    IF from_balance < amount THEN
+      SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Error: insufficient balance';
+      ROLLBACK;
+      LEAVE transfer;
+    END IF;
+    UPDATE accounts SET balance = balance - amount WHERE account_name = from_account;
+  END IF;
+
+  COMMIT;
+  SELECT 'Success' AS result;
+END;
+```
+
+### 加法器存储函数
+```sql
+CREATE FUNCTION calculate_total(num1 INT, num2 INT)
+RETURNS INT
+BEGIN
+    DECLARE total INT;
+    SET total = num1 + num2;
+    RETURN total;
+END;
+
+SELECT calculate_total(5, 10);
+```
+
+### 清理垃圾事件
+每天凌晨1点删除orders表中30天前的数据
+```sql
+CREATE EVENT IF NOT EXISTS clean_old_orders
+ON SCHEDULE EVERY 1 DAY
+STARTS (TIMESTAMP(CURRENT_DATE) + INTERVAL 1 DAY + INTERVAL 1 HOUR)
+DO
+  DELETE FROM orders WHERE order_date < DATE_SUB(NOW(), INTERVAL 30 DAY);
+```
+
+### 删除保护触发器
+如果这是最后一个管理员，那么触发器将回滚事务，防止删除操作。
+```sql
+CREATE TRIGGER prevent_last_admin_deletion
+BEFORE DELETE
+ON admin
+FOR EACH ROW
+BEGIN
+   DECLARE admin_count INT;
+   SELECT COUNT(*) INTO admin_count FROM admin;
+   IF admin_count = 1 THEN
+      SIGNAL SQLSTATE '45000'
+         SET MESSAGE_TEXT = 'Cannot delete the last admin.';
+   END IF;
+END;
+```
+
+
+## 锁
+
+### 全局锁 
+```sql
+FLUSH TABLES WITH WRITE/READ LOCK; --全局锁（锁数据库）：
 UNLOCK TABLES;
 ```
 
+### 表锁
+```sql
+-- DROP/ALTER/TRUNCATE TABLE过程中自动加表锁
+LOCK TABLES table_name WRITE/READ; --表锁
+UNLOCK TABLES;
+```
+
+### 行级锁
+```sql
+-- INSERT/UPDATE/DELETE会自动加排他锁（FOR UPDATE）
+SELECT ... FOR UPDATE/LOCK IN SHARE MODE
+-- InnoDB 在行锁很多时有可能自动升级表锁
+```
 
 ## 数据库备份
 
 ### sql模式
 
 ```bash
-mysqldump -u username -p dbname [tbname ...] [--all-databases] [-d 只备份结构]> filename.sql
+mysqldump -u username -p dbname [tbname ... ] [--all-databases] [-d 只备份结构]> filename.sql
+mysqldump --single-transaction -u username -p  # 保证导出数据一致性
 ```
 
 ### txt模式
