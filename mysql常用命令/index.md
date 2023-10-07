@@ -85,6 +85,13 @@ update 表名 set 字段1=值1, 字段2=值2 [where 条件];
 delete from 表名 [where 条件];
 ```
 
+强制忽略外键约束
+```sql
+SET FOREIGN_KEY_CHECKS = 0
+-- 操作语句
+SET FOREIGN_KEY_CHECKS = 1;
+```
+
 
 ## DQL
 
