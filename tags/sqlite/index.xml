@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Sqlite - 标签 - BYTESC blog</title>
+        <link>http://example.org/tags/sqlite/</link>
+        <description>Sqlite - 标签 - BYTESC blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bytesc@163.com (bytesc)</managingEditor>
+            <webMaster>bytesc@163.com (bytesc)</webMaster><copyright>bytesc</copyright><lastBuildDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/sqlite/" rel="self" type="application/rss+xml" /><item>
+    <title>Sqlite3 常用命令</title>
+    <link>http://example.org/sqlite3%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Wed, 13 Sep 2023 15:58:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/sqlite3%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cover/sqlite.png" referrerpolicy="no-referrer">
+            </div>记录一些 Sqlite3 常用命令]]></description>
+</item>
+</channel>
+</rss>
