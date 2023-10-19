@@ -1,9 +1,38 @@
-# Ubuntu apt 镜像源配置
+# 各种镜像源配置
 
 
-# Ubuntu apt 镜像源配置
+# 各种镜像源配置
 
-## 方法一：配置文件
+## python
+
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 库名
+```
+
+```txt
+清华：https://pypi.tuna.tsinghua.edu.cn/simple
+阿里云：http://mirrors.aliyun.com/pypi/simple/
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+华中理工大学：http://pypi.hustunique.com/
+山东理工大学：http://pypi.sdutlinux.org/
+豆瓣：http://pypi.douban.com/simple/
+```
+
+## golang
+
+```bash
+go env -w GO111MODULE=on
+
+go env -w  GOPROXY=https://goproxy.cn,direct
+go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+go env -w  GOPROXY=https://goproxy.io,direct
+
+```
+
+
+## Ubuntu apt 镜像源配置
+
+### 方法一：配置文件
 
 bash```
 vim /etc/apt/sources.list
@@ -29,7 +58,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted 
 # # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
 ```
 
-## 方法二：echo
+### 方法二：echo
 
 没有vim的情况下：
 ```bash
