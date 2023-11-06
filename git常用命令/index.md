@@ -165,6 +165,13 @@ git reset --mixed HEAD^
 
 ### .gitignore
 
+从 git 缓存中删除误提交的大文件等
+```bash
+git rm -r --cached [文件夹/文件名称] 
+git rm -r --cached .idea
+```
+
+
 ```txt
 *.txt  ，*.xls  表示过滤某种类型的文件
 target/ ：表示过滤这个文件夹下的所有文件
