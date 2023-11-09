@@ -29,10 +29,24 @@ git config core.protectNTFS false
 git config --global http.postBuffer 524288000
 git config --global sendpack.sideband false
 
-git config --global http.sslVerify false
-git config --global https.sslVerify false
 git config --global http.postBuffer 1048576000
 git config --global https.postBuffer 1048576000
+```
+
+### 遇到 TLS 验证问题
+
+```bash
+git config --global http.sslVerify false
+git config --global https.sslVerify false
+```
+
+### 遇到 DNS 问题
+
+```bash
+nslookup github.com 8.8.8.8
+# nslookup github.com
+
+ssh -v -T git@[nslookup 获取的ip地址]
 ```
 
 
@@ -126,6 +140,8 @@ git push origin --tags
 git remote -v
 git remote add origin git@gitee.com:bytesc/git_test03.git
 git remote set-url origin git@gitee.com:bytesc/git_test03.git
+git remote rm origin
+# origin 可以替换为任何仓库名
 ```
 
 ### 关联远程分支
