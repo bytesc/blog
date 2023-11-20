@@ -183,8 +183,16 @@ git reset --mixed HEAD^
 
 从 git 缓存中删除误提交的大文件等
 ```bash
-git rm -r --cached [文件夹/文件名称] 
-git rm -r --cached .idea
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch {file_path}' --prune-empty --tag-name-filter cat -- --all
+
+rm -Rf .git/refs/original # linux
+# rd ./.git/refs/original # windows
+rm -Rf .git/logs/ # linux
+# rd ./.git/logs/ # windows
+git gc
+git prune
+
+git push origin master --force  # 需要强制推送才行
 ```
 
 
